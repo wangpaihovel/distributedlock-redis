@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <!-- 此部分不能使用 <properties/...> 中的元素来取代，必须直接给出具体的内容  -->
+        <version>2.6.3</version>
+    </parent>
+
+    <groupId>org.wangpai.demo</groupId>
+    <artifactId>redis_distributed_lock</artifactId>
+    <version>0.0</version>
+
+    <properties>
+        <java.version>17</java.version>
+
+        <!-- 凡是自定义的属性，都要加 .custom 后缀，以防与已有的预置属性相冲突 -->
+        <project.version.custom>M.0.0</project.version.custom>
+
+        <junit.version.custom>5.8.0-M1</junit.version.custom>
+        <lombok.version.custom>1.18.20</lombok.version.custom>
+        <slf4j.version.custom>1.7.13</slf4j.version.custom>
+
+    </properties>
+    <dependencies>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version.custom}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version.custom}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+
+    </dependencies>
+
+</project>
